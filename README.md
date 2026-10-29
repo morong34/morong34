@@ -1,41 +1,64 @@
-# Hi, I'm Narcis 👋
+<div align="center">
 
-Software developer in Timișoara. I build full-stack products end to end and use AI agents as a normal part of how I work.
+# Narcis-Eusebiu Morong
 
-## What I work with
+**Full-stack developer · AI-agent workflows · Timișoara 🇷🇴**
 
-| Area | Stack |
-|---|---|
-| Backend | Ruby on Rails, PostgreSQL + PostGIS, Sidekiq, Redis, WebSockets |
-| Web | Angular, TypeScript, signals, SCSS design tokens, Vitest |
-| Mobile | Flutter / Dart, Riverpod |
-| Services | Python, FastAPI, SQLAlchemy |
-| AI | Claude API, local models with MLX, OCR and document pipelines |
-| Geospatial / data | Satellite imagery, weather data, PostGIS, scrapers and data pipelines |
-| Platform | Cloudflare (Tunnel, Access, Pages), launchd, GitHub Actions with a self-hosted runner |
+<a href="https://www.linkedin.com/in/morong-narcis-eusebiu-543591200"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<img src="https://img.shields.io/badge/open%20to-collaboration-2ea44f?style=for-the-badge" alt="Open to collaboration">
 
-## How I work with AI agents
+</div>
 
-I use Claude Code as a coordinator, not just an autocomplete:
+---
 
-- **Specialist agents** answer questions read-only and cite file and line.
-- **Worker agents** implement one scoped change in their own git worktree and open a pull request. A human merges.
-- **Verifier agents** re-check every pull request in a fresh context against its acceptance criteria before it merges.
-- **Hard rules** keep it safe on production hardware: worktrees only, no merge without a verifier and green CI, no secrets in agent sandboxes, production writes only after a dry run, a backup and my approval.
-- Cheaper models do routine work, and the strongest model is kept for design, root-cause and security questions.
+## 🛠️ What I work with
 
-## What I care about
+<div align="center">
 
-- Access control, audit trails and safe defaults: roles, invitations, rate limits, soft deletes with a grace period.
-- Reliable deploys: fewer restarts, quiet retries in the client, and a path to zero-downtime releases.
-- Data honesty: every number on a screen should be real data, and its label should describe it.
-- Clear hand-offs between humans and agents.
+<img src="https://skillicons.dev/icons?i=rails,ruby,postgres,redis,angular,ts,flutter,dart,py,fastapi,cloudflare,githubactions&perline=6" alt="Rails, Ruby, PostgreSQL, Redis, Angular, TypeScript, Flutter, Dart, Python, FastAPI, Cloudflare, GitHub Actions">
 
-## Interests
+</div>
+
+Backend and APIs, web and mobile apps, geospatial and satellite data, document and AI pipelines (Claude API, local models with MLX), and the platform around them: tunnels, access control, CI and deploys.
+
+## 🤖 How I work with AI agents
+
+I use Claude Code as a coordinator, not just an autocomplete. Every change goes through the same loop:
+
+```mermaid
+flowchart LR
+    A([Me: scope the work]) --> B[Specialist agents<br/>read-only answers]
+    B --> C[Worker agent<br/>own git worktree]
+    C --> D[Pull request]
+    D --> E{Verifier agent<br/>fresh context}
+    E -- not ready --> C
+    E -- ready + green CI --> F([Merge + deploy])
+```
+
+> [!IMPORTANT]
+> Agents write and check the code. A human decides what ships.
+
+<details>
+<summary><b>The rules that keep it safe on production hardware</b></summary>
+
+- Worktrees only, never edit a production checkout.
+- No merge without a verifier saying ready and a green CI gate.
+- No secrets in agent sandboxes.
+- Production writes only after a dry run, a backup and my approval.
+- Cheaper models do routine work; the strongest model is kept for design, root-cause and security questions.
+
+</details>
+
+## 🎯 What I care about
+
+- **Access control and audit trails:** roles, invitations, rate limits, soft deletes with a grace period.
+- **Reliable deploys:** fewer restarts, quiet retries in the client, a path to zero downtime.
+- **Data honesty:** every number on a screen is real data, and its label describes it.
+- **Clear hand-offs** between humans and agents.
+
+## 🔭 Interests
 
 Software engineering, web and mobile engineering, and building reliable systems that people outside tech depend on.
-
-📫 Find me on [LinkedIn](https://www.linkedin.com/in/morong-narcis-eusebiu-543591200).
 
 <!--
 morong34/morong34 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
